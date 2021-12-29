@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+  - sonarQube
+
+build: 
+  stage: build
+  script: 
+    - cd DentistAppointments
+    - ./gradlew build -x test
+  
+
+test:
+  stage: test
+  script: 
+    - cd DentistAppointments
+    - ./gradlew test
+
+sonarQube:
+  stage: sonarQube
+  script:
+    - cd DentistAppointments
+    - ./gradlew sonarqube
+
+after_script:
+  - echo "done"
+  - exit

@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+/* html { overflow-y: scroll; overflow-x:hidden; } */
+
+/* body::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+} */
+
+/* removes styling from links */
+a:hover, a:visited, a:link, a:active
+{
+  text-decoration: none!important;
+}
+
+.navbar{
+  justify-content: space-between!important;
+}
+
+.links-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0px!important;
+}
+
+.links-list li, .navbar-logo a{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.links-list li a, .navbar-logo a{
+  color: white!important;
+  font-size: 20px;
+}
+
+.links-list li a:hover, .navbar-logo a:hover{
+  color: orangered!important;
+  font-size: 20px;
+}
+
+.container{
+  min-height: calc(100vh - 56px - 50px)!important;
+}
+
+.footer{
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.navbar_link{
+  text-decoration: none!important;
+}
+
+.add-button{
+  max-width: 180px;
+  margin-bottom: 1px; 
+}
+
+.form_btn{
+  margin-top: 10px;
+}
+
+/* //////////////////////////////////// */
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.card-container.card {
+  max-width: 350px !important;
+  padding: 40px 40px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.patient_table_row{
+  cursor: pointer;
+}
+
+.patient_table_row:hover{
+  background-color: #d3d3d3;
+}

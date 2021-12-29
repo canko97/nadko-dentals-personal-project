@@ -1,0 +1,33 @@
+
+////////////////////////////////////////
+
+Run a docker container with mysql database based on the mysql:8.0 image:
+
+docker run -d -p 3306:3306 --name=mysql-standalone -e MYSQL_ROOT_PASSWORD=Password1234 -e MYSQL_DATABASE=nadko_dentals -d mysql:8.0
+
+////////////////////////////////////////
+
+Build nadko-dentals API: 
+
+- gradle clean build -x test
+
+Build a docker image of nadko-dentals API: 
+
+- docker build . -t nadko-dentals
+
+Run a docker container based on the nadko-dentals image,
+link it to "mysql-standalone" container,
+map it to port 8081: 
+
+- docker run -t --link mysql-standalone:mysql -p 8081:8081 nadko-dentals
+
+////////////////////////////////////////
+
+Before making any requests to the server from the front end
+you have to populate the "roles" table
+
+To do that go to:
+
+- http://localhost:8081/api/test/populate
+^^^ makes an api POST request to populate the "roles" table with the 3 different roles (ROLE_USER, ROLE_ASSISTANT, ROLE_DENTIST).
+ 
